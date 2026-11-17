@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Voice Lab — Active & Passive Voice</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="top">
+        <div class="wrap">
+            <div class="brand">
+                ✳ &nbsp; Kyla Bonds · Active vs Passive Voice
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap">
+
+        <!-- Hero Section -->
+        <section class="hero">
+
+            <div>
+                <div class="eyebrow">
+                    Grammar? Let's make it clear
+                </div>
+
+                <h1>
+                    Who’s doing the <em>doing ?</em>
+                </h1>
+
+                <p class="intro">
+                    Active and passive voice tell the same story
+                    from different angles. Learn how to spot each
+                    one, then practice with a quick matching game
+                    and flash cards.
+                </p>
+            </div>
+
+            <div class="hero-art" aria-hidden="true">
+                <span class="tag one">the doer</span>
+                <span class="arrow">→</span>
+                <span class="tag two">the receiver</span>
+            </div>
+
+        </section>
+
+
+        <!-- Quick Lesson Section -->
+        <section class="section" aria-labelledby="lesson-title">
+
+            <div class="section-head">
+
+                <div>
+                    <div class="eyebrow">The quick lesson</div>
+
+                    <h2 id="lesson-title">
+                        Same action. Different focus.
+                    </h2>
+                </div>
+
+                <p>
+                    Find the subject, then ask: what is it doing?
+                </p>
+
+            </div>
+
+
+            <div class="lesson">
+
+                <div class="lesson-grid">
+
+                    <!-- Active Voice -->
+                    <article class="voice-card active">
+
+                        <h3>Active voice</h3>
+
+                        <span class="formula">
+                            Doer → action → receiver
+                        </span>
+
+                        <p>
+                            The subject performs the action.
+                            The sentence feels direct and easy
+                            to follow.
+                        </p>
+
+                        <p class="example">
+                            <span class="actor">The chef</span>
+                            baked the bread.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Passive Voice -->
+                    <article class="voice-card passive">
+
+                        <h3>Passive voice</h3>
+
+                        <span class="formula">
+                            Receiver → action → by doer
+                        </span>
+
+                        <p>
+                            The subject receives the action.
+                            The doer can come later—or be left out.
+                        </p>
+
+                        <p class="example">
+                            <span class="receiver">The bread</span>
+                            was baked by the chef.
+                        </p>
+
+                    </article>
+
+                </div>
+
+
+                <!-- Helpful Tip -->
+                <div class="tip">
+                    <strong>Quick clue:</strong>
+                    Passive voice often uses a form of
+                    <em>be</em> (is, was, were, been) +
+                    a past participle (made, carried, chosen).
+                    That clue helps, but always check who
+                    receives the action.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Interactive Practice Section -->
+        <section class="activity" aria-labelledby="practice-title">
+
+            <div class="section-head">
+
+                <div>
+                    <div class="eyebrow">Your turn</div>
+
+                    <h2 id="practice-title">
+                        Practice zone
+                    </h2>
+
+                    <p>
+                        Play a round, or flip through the cards.
+                    </p>
+                </div>
+
+
+                <!-- Activity Tabs -->
+                <div class="tabs" role="tablist">
+
+                    <button
+                        class="tab"
+                        role="tab"
+                        aria-selected="true"
+                        aria-controls="matching"
+                        id="matching-tab">
+
+                        Matching
+
+                    </button>
+
+                    <button
+                        class="tab"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="flashcards"
+                        id="flashcards-tab">
+
+                        Flash cards
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Matching Game -->
+            <div
+                id="matching"
+                class="panel active"
+                role="tabpanel"
+                aria-labelledby="matching-tab">
+
+                <div class="match-layout">
+
+                    <div
+                        class="match-col"
+                        id="leftCards"
+                        aria-label="Sentences">
+                    </div>
+
+                    <div
+                        class="match-col"
+                        id="rightCards"
+                        aria-label="Voice types">
+                    </div>
+
+                </div>
+
+
+                <div class="activity-foot">
+
+                    <span id="matchStatus" aria-live="polite">
+                        Choose a sentence, then choose its voice.
+                    </span>
+
+                    <button class="button" id="resetMatch">
+                        Start over
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Flashcards -->
+            <div
+                id="flashcards"
+                class="panel"
+                role="tabpanel"
+                aria-labelledby="flashcards-tab"
+                hidden>
+
+                <div class="flash-wrap">
+
+                    <button
+                        class="arrow-btn"
+                        id="prevCard"
+                        aria-label="Previous card">
+
+                        ‹
+
+                    </button>
+
+
+                    <div
+                        class="flashcard"
+                        id="flashcard"
+                        tabindex="0"
+                        role="button"
+                        aria-label="Flash card. Click to reveal answer.">
+
+                    </div>
+
+
+                    <button
+                        class="arrow-btn"
+                        id="nextCard"
+                        aria-label="Next card">
+
+                        ›
+
+                    </button>
+
+                </div>
+
+
+                <!-- Flashcard Progress -->
+                <div
+                    class="progress"
+                    role="progressbar"
+                    aria-label="Flashcard progress"
+                    aria-valuemin="0"
+                    aria-valuemax="100">
+
+                    <span id="progressBar"></span>
+
+                </div>
+
+                <p class="flash-foot" id="cardCount"></p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="wrap">
+            Keep the focus clear: identify the subject,
+            then follow the action.
+
+            <p>Created by Kyla Bonds</p>
+        </div>
+    </footer>
+
+</body>
+</html>
